@@ -2,6 +2,16 @@
   padding: 0;
   margin: 0;
   font-size: 36px;
+  font-family: "NowAltRegular";
+  font-weight: normal;
+  font-style: normal;
+  text-decoration: none;
+}
+
+a {
+  font-size: 68px;
+  -webkit-text-fill-color: rgba(0, 0, 0, 0);
+  -webkit-text-stroke: 1px black;
 }
 
 html {
@@ -9,54 +19,91 @@ html {
 }
 
 #about,
-#education,
+#background,
 #works,
 #contact {
   position: sticky;
   position: -webkit-sticky;
+  border: 1px solid black;
+  background-color: wheat;
 }
 
 #about {
-  background-color: black;
   padding: 0.5em;
-  color: white;
   top: 0;
+  background-color: #faf9f9;
 }
 
-#education {
-  background-color: blue;
+.about-text {
+  font-size: 48px;
+  margin-bottom: 1em;
+}
+.about-restart-button {
+  opacity: 0;
+  transition: all 0.5s ease;
+}
+
+.about-restart-button,
+.about-learn-more-button {
+  background-color: rgba(0, 0, 0, 0);
+  border: 0;
+  color: saddlebrown;
+  display: flex;
+  align-items: center;
+  font-size: 16px;
+  text-align: left;
+  margin-bottom: 1em;
+}
+
+#background {
   padding: 0.5em;
   top: 2em;
 }
 
 #works {
-  background-color: green;
   padding: 0.5em;
   top: 4em;
+  background-color: whitesmoke;
 }
 #contact {
-  background-color: purple;
+  background-color: orange;
   padding: 0.5em;
   top: 6em;
 }
 
 .nav-link {
   line-height: 1.4;
-  color: #fff;
+  font-size: 48px;
+  padding-left: 0;
 }
 
 .restart {
   cursor: pointer;
 }
 
+/*SCROLLBAR*/
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: rgb(48, 48, 48);
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
 @media screen and (min-width: 60em) {
   #about,
-  #education,
+  #background,
   #works,
   #contact {
     box-sizing: border-box;
   }
-
+  /*About section desktop styles*/
   #about {
     position: absolute;
     top: 0;
@@ -64,29 +111,56 @@ html {
     width: 65%;
     height: 35%;
   }
+  /*Buttons for about section*/
+  .about-restart-button {
+    position: absolute;
+    top: 10%;
+    right: 2%;
+  }
 
-  #education {
+  .about-learn-more-button {
+    position: absolute;
+    bottom: 10%;
+    transform: translateY(50%);
+    right: 2%;
+  }
+
+  .about-learn-more-arrow,
+  .about-restart-arrow {
+    font-size: 32px;
+    margin-left: 0.5em;
+  }
+
+  .about-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  #background {
     position: absolute;
     top: 0;
     right: 0;
     width: 35%;
-    height: 50%;
+    height: 55%;
     overflow-y: scroll;
   }
 
   #works {
     position: absolute;
-    top: 25%;
+    top: 35%;
     left: 0;
     width: 65%;
-    height: 75%;
+    height: 65%;
+    overflow-y: scroll;
   }
 
   #contact {
     position: absolute;
-    top: 50%;
+    top: 55%;
     right: 0;
-    height: 50%;
+    height: 45%;
     width: 35%;
     overflow-y: scroll;
   }
