@@ -8,7 +8,7 @@
   text-decoration: none;
 }
 
-a {
+a.nav-link {
   font-size: 68px;
   -webkit-text-fill-color: rgba(0, 0, 0, 0);
   -webkit-text-stroke: 1px black;
@@ -26,6 +26,7 @@ html {
   position: -webkit-sticky;
   border: 1px solid black;
   background-color: wheat;
+  overflow-y: scroll;
 }
 
 #about {
@@ -37,7 +38,16 @@ html {
 .about-text {
   font-size: 48px;
   margin-bottom: 1em;
+  transition:all 0.2s ease;
+  display:flex;
+  align-items: center;
+  justify-content: center;
 }
+
+.about-text:hover{
+  transform: rotate(2deg);
+}
+
 .about-restart-button {
   opacity: 0;
   transition: all 0.5s ease;
@@ -53,6 +63,12 @@ html {
   font-size: 16px;
   text-align: left;
   margin-bottom: 1em;
+}
+
+.about-learn-more-arrow,
+.about-restart-arrow {
+  font-size: 32px;
+  margin-left: 0.5em;
 }
 
 #background {
@@ -84,6 +100,8 @@ html {
 /*SCROLLBAR*/
 ::-webkit-scrollbar {
   width: 10px;
+  background-color: rgba(0, 0, 0, 0)
+  border:0;
 }
 
 /* Handle */
@@ -93,7 +111,7 @@ html {
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-  background: #555;
+  background: black;
 }
 
 @media screen and (min-width: 60em) {
@@ -128,15 +146,9 @@ html {
   .about-learn-more-arrow,
   .about-restart-arrow {
     font-size: 32px;
-    margin-left: 0.5em;
   }
 
-  .about-text {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-  }
+  
 
   #background {
     position: absolute;

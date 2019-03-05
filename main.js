@@ -26,6 +26,7 @@ function showAboutText() {
   for (var i = 0; i < aboutText.length; i++) {
     (function(i) {
       setTimeout(function() {
+        document.querySelector(".about-text").style.opacity = "1";
         document.querySelector(".about-text").innerHTML = aboutText[i];
         if (i == aboutText.length - 1) {
           showRestartButton();
