@@ -14,8 +14,6 @@ html {
 #contact {
   position: sticky;
   position: -webkit-sticky;
-  height: 50vh;
-  overflow: scroll;
 }
 
 #about {
@@ -23,7 +21,6 @@ html {
   padding: 0.5em;
   color: white;
   top: 0;
-  height: 25vh;
 }
 
 #education {
@@ -41,10 +38,56 @@ html {
   background-color: purple;
   padding: 0.5em;
   top: 6em;
-  height: 15.5em;
 }
 
 .nav-link {
   line-height: 1.4;
   color: #fff;
+}
+
+.restart {
+  cursor: pointer;
+}
+
+@media screen and (min-width: 60em) {
+  #about,
+  #education,
+  #works,
+  #contact {
+    box-sizing: border-box;
+  }
+
+  #about {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 65%;
+    height: 35%;
+  }
+
+  #education {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 35%;
+    height: 50%;
+    overflow-y: scroll;
+  }
+
+  #works {
+    position: absolute;
+    top: 25%;
+    left: 0;
+    width: 65%;
+    height: 75%;
+  }
+
+  #contact {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    height: 50%;
+    width: 35%;
+    overflow-y: scroll;
+  }
 }

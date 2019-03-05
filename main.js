@@ -1,21 +1,26 @@
-let contact = document.getElementById("contact");
-let works = document.getElementById("works");
-let education = document.getElementById("education");
-let about = document.getElementById("about");
+let aboutText = document.querySelector(".about-text").textContent;
 
-function overlapping() {
-  window.addEventListener("scroll", function() {
-    console.log(contact.scrollTop);
-    /*if (contact.getBoundingClientRect().top == 216) {
-      works.style.zIndex = "2";
-      education.style.zIndex = "2";
-      about.style.zIndex = "2";
-      contact.style.top = "6em";
-      requestAnimationFrame(overlapping());
-    } else {
-      contact.style.position = "sticky";
-    }*/
-  });
+window.addEventListener("DOMContentLoaded", init());
+
+function init() {
+  formAboutText();
 }
 
-overlapping();
+function formAboutText() {
+  let formedText = aboutText.split(" ");
+  splittedText = formedText.filter(function(str) {
+    return /\S/.test(str);
+  });
+  showAboutText(splittedText);
+}
+
+function showAboutText(splittedText) {
+  for (var i = 0; i < splittedText.length; i++) {
+    (function(i) {
+      setTimeout(function() {
+        document.querySelector(".about-text").innerHTML = splittedText[i];
+        console.log(splittedText[i]);
+      }, 400 * i);
+    })(i);
+  }
+}
