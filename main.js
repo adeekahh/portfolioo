@@ -6,6 +6,8 @@ let aboutText = document
     return /\S/.test(str);
   });
 
+let viewWidth = window.matchMedia("(max-width: 700px)");
+
 //Work image arrays
 let intermediaArray = ["1.png", "2.png", "3.png"];
 
@@ -20,8 +22,25 @@ function init() {
       showAboutText();
     });
 
-  showAboutText();
+  window.addEventListener("resize", checkViewWidth());
+
+  if (viewWidth.matches) {
+    // If media query matches
+    showAboutText();
+  } else {
+    console.log("media query");
+  }
 }
+
+function checkViewWidth() {
+  if (viewWidth.matches) {
+    // If media query matches
+    showAboutText();
+  } else {
+    console.log("media query");
+  }
+}
+
 //About section text animation
 function showAboutText() {
   document.querySelector(".about-restart-button").style.opacity = "0";
