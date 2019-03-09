@@ -9,7 +9,6 @@
 }
 
 a.nav-link {
-  font-size: 68px;
   -webkit-text-fill-color: rgba(0, 0, 0, 0);
   -webkit-text-stroke: 1px black;
 }
@@ -38,13 +37,13 @@ html {
 .about-text {
   font-size: 48px;
   margin-bottom: 1em;
-  transition:all 0.2s ease;
-  display:flex;
+  transition: all 0.2s ease;
+  display: flex;
   align-items: center;
   justify-content: center;
 }
 
-.about-text:hover{
+.about-text:hover {
   transform: rotate(2deg);
 }
 
@@ -73,18 +72,45 @@ html {
 
 #background {
   padding: 0.5em;
-  top: 2em;
+  top: 0;
 }
 
 #works {
   padding: 0.5em;
-  top: 4em;
+  top: 0;
   background-color: whitesmoke;
+  height: 100vh;
+  overflow-y: scroll;
 }
+
+a.website-link {
+  line-height: 1.4;
+}
+
+h2.websites-header,
+h2.uxui-header {
+  font-size: 48px;
+  margin-top: 0.5em;
+  margin-bottom: 0.2em;
+}
+
+ul.websites-list {
+  list-style-type: none;
+  margin-bottom: 1em;
+}
+
 #contact {
   background-color: orange;
   padding: 0.5em;
   top: 6em;
+}
+
+.email-container {
+  margin-top: 0.5em;
+}
+
+.fa-envelope {
+  margin-bottom: 0.2em;
 }
 
 .nav-link {
@@ -100,8 +126,8 @@ html {
 /*SCROLLBAR*/
 ::-webkit-scrollbar {
   width: 10px;
-  background-color: rgba(0, 0, 0, 0)
-  border:0;
+  background-color: rgba(0, 0, 0, 0);
+  border: 0;
 }
 
 /* Handle */
@@ -136,6 +162,10 @@ html {
     right: 2%;
   }
 
+  a.nav-link {
+    font-size: 68px;
+  }
+
   .about-learn-more-button {
     position: absolute;
     bottom: 10%;
@@ -147,8 +177,6 @@ html {
   .about-restart-arrow {
     font-size: 32px;
   }
-
-  
 
   #background {
     position: absolute;
@@ -175,5 +203,19 @@ html {
     height: 45%;
     width: 35%;
     overflow-y: scroll;
+  }
+
+  .email-container {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+  }
+  .fa-envelope {
+    margin-left: 0.5em;
+  }
+
+  h2.websites-header,
+  h2.uxui-header {
+    font-size: 68px;
   }
 }
