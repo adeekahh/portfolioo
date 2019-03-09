@@ -44,10 +44,6 @@ html {
   justify-content: center;
 }
 
-.about-text:hover {
-  transform: rotate(2deg);
-}
-
 .about-restart-button {
   opacity: 0;
   transition: all 0.5s ease;
@@ -204,8 +200,14 @@ ul.contact-list {
     font-size: 68px;
   }
 
+  .about-text {
+    margin-top: 0em;
+    margin-bottom: 0em;
+  }
+
   .about-learn-more-button {
-    position: absolute;
+    position: sticky;
+    position: -webkit-sticky;
     bottom: 10%;
     transform: translateY(50%);
     right: 2%;
