@@ -216,6 +216,16 @@ ul.contact-list {
   .about-learn-more-arrow,
   .about-restart-arrow {
     font-size: 32px;
+    transition: all 0.4s ease-in-out;
+  }
+
+  .learn-more-button-arrow-container {
+    width: 52px;
+    overflow: hidden;
+  }
+
+  .learn-more-button-arrow-container:hover .about-learn-more-arrow {
+    margin-left: 52px;
   }
 
   #background {
