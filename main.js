@@ -61,12 +61,12 @@ function loopThroughImages() {
         document.querySelector(
           ".work-image"
         ).src = `assets/project-pictures/intermedia/${intermediaArray[i]}`;
-
-        if (i >= intermediaArray.length) {
-          loopThroughImages();
-        }
       }, 300 * i);
     })(i);
+  }
+
+  if (i == intermediaArray.length - 1) {
+    i = 0;
   }
 }
 
