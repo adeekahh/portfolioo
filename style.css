@@ -67,6 +67,10 @@ html {
   margin-left: 0.5em;
 }
 
+.learn-more-button-arrow-container:nth-child(2) {
+  display: none;
+}
+
 #background {
   padding: 0.5em;
   top: 0;
@@ -222,10 +226,15 @@ ul.contact-list {
   .learn-more-button-arrow-container {
     width: 52px;
     overflow: hidden;
+    display: flex;
+  }
+
+  .about-learn-more-arrow {
+    transform: translateX(-52px);
   }
 
   .learn-more-button-arrow-container:hover .about-learn-more-arrow {
-    margin-left: 52px;
+    transform: translateX(-8px);
   }
 
   #background {
