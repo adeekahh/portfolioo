@@ -83,20 +83,35 @@ html {
   overflow-y: scroll;
 }
 
+.work-image-container {
+  display: none;
+}
+
 a.website-link {
   line-height: 1.4;
+  color: black;
+}
+
+.messenger-link {
+  color: black;
 }
 
 h2.websites-header,
 h2.uxui-header {
   font-size: 48px;
-  margin-top: 0.5em;
+  margin-top: 0.2em;
   margin-bottom: 0.2em;
 }
 
-ul.websites-list {
+ul.websites-list,
+ul.background-list,
+ul.contact-list {
   list-style-type: none;
   margin-bottom: 1em;
+}
+
+.background-li-arrow {
+  margin-right: 0.5em;
 }
 
 #contact {
@@ -105,12 +120,34 @@ ul.websites-list {
   top: 6em;
 }
 
-.email-container {
+.email-container,
+.messenger-container {
   margin-top: 0.5em;
 }
 
 .fa-envelope {
   margin-bottom: 0.2em;
+  font-weight: 200;
+}
+
+.fa-envelope,
+.fa-facebook-messenger {
+  margin-right: 0.5em;
+}
+
+.fa-envelope,
+.fa-facebook-messenger,
+.background-li-arrow {
+  transition: 0.4s ease-in-out;
+}
+
+.fa-envelope:hover,
+.fa-facebook-messenger:hover {
+  transform: rotate(15deg);
+}
+
+.background-li-arrow:hover {
+  transform: translateX(5px);
 }
 
 .nav-link {
@@ -187,6 +224,21 @@ ul.websites-list {
     overflow-y: scroll;
   }
 
+  .background-li,
+  .contact-list-li {
+    margin-top: 0.2em;
+    margin-bottom: 0.5em;
+  }
+
+  .contact-list-li,
+  .background-li {
+    display: flex;
+  }
+
+  ul.contact-list {
+    margin-top: 1em;
+  }
+
   #works {
     position: absolute;
     top: 35%;
@@ -194,6 +246,27 @@ ul.websites-list {
     width: 65%;
     height: 65%;
     overflow-y: scroll;
+  }
+
+  .work-image-container {
+    position: absolute;
+    display: flex;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    justify-content: center;
+  }
+
+  .work-image {
+    width: 90%;
+    height: 90%;
+    display: none;
+  }
+
+  .works-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: baseline;
   }
 
   #contact {
@@ -204,15 +277,20 @@ ul.websites-list {
     width: 35%;
     overflow-y: scroll;
   }
-
+  /* 
   .email-container {
     display: flex;
     flex-direction: row-reverse;
     justify-content: flex-end;
+    align-items: center;
+    line-height: 1.4;
   }
-  .fa-envelope {
-    margin-left: 0.5em;
-  }
+
+  .messenger-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+  } */
 
   h2.websites-header,
   h2.uxui-header {
