@@ -11,12 +11,14 @@ window.onload = () => {
 
 //recording scrolltop
 document.addEventListener("scroll", () => {
-  let y = (pageYOffset / 100) * -1;
-  console.log(y);
+  let offset = (pageYOffset / 100) * -1;
+
+  let val = document.querySelector(".single-work-title-container-inner").style
+    .transform;
+
+  console.log(val);
+
   document.querySelector(
     ".single-work-title-container-inner"
-  ).style.transform = `translateX(${y}%)`;
-  console.log(
-    document.querySelector(".single-work-title-container-inner").style.transform
-  );
+  ).style.transform = `translateX(${offset}%)`;
 });

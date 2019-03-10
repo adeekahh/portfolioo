@@ -41,30 +41,3 @@ function showAboutText() {
 function showRestartButton() {
   document.querySelector(".about-restart-button").style.opacity = "1";
 }
-
-//Work image script
-document.querySelector("#intermedia").addEventListener("mouseover", () => {
-  //console.log(event);
-  loopThroughImages();
-});
-document.querySelector("#intermedia").addEventListener("mouseleave", () => {
-  //console.log(event);
-  hideWorkImage();
-});
-
-function loopThroughImages() {
-  document.querySelector(".work-image").style.display = "block";
-  for (let i = 0; i < intermediaArray.length; i++) {
-    (function(i) {
-      setTimeout(function() {
-        document.querySelector(
-          ".work-image"
-        ).src = `assets/project-pictures/intermedia/${intermediaArray[i]}`;
-      }, 300 * i);
-    })(i);
-  }
-}
-
-function hideWorkImage() {
-  document.querySelector(".work-image").style.display = "none";
-}

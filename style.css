@@ -94,6 +94,11 @@ a.website-link {
   color: black;
 }
 
+a.website-link:hover {
+  -webkit-text-fill-color: rgba(0, 0, 0, 0);
+  -webkit-text-stroke: 1px black;
+}
+
 .messenger-link {
   color: black;
 }
@@ -193,13 +198,13 @@ ul.contact-list {
 }
 
 html {
-  height: 2000vh;
+  height: 1000vh;
 }
 
 .single-work-title-container-inner {
   display: flex;
   white-space: nowrap;
-  transform: translateX(-100%);
+  transform: translateX(-500%);
 }
 
 .single-work-title {
@@ -213,8 +218,8 @@ html {
 }
 
 .marquee {
-  /* animation: marquee 12s linear infinite; */
-  padding: 1em 0.2em;
+  animation: marquee 12s linear infinite;
+  padding: 0.5em 0.2em;
 }
 
 @keyframes marquee {
