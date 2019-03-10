@@ -209,7 +209,7 @@ html {
 
 .single-work-title {
   display: flex;
-  font-size: 96px;
+  font-size: 48px;
 }
 
 .single-work-title:hover {
@@ -379,5 +379,9 @@ html {
   h2.websites-header,
   h2.uxui-header {
     font-size: 68px;
+  }
+
+  .single-work-title {
+    font-size: 96px;
   }
 }
