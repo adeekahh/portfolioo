@@ -6,8 +6,6 @@ let aboutText = document
     return /\S/.test(str);
   });
 
-let viewWidth = window.matchMedia("(max-width: 700px)");
-
 //Work image arrays
 let intermediaArray = ["1.png", "2.png", "3.png"];
 
@@ -21,24 +19,7 @@ function init() {
       console.log("click");
       showAboutText();
     });
-
-  window.addEventListener("resize", checkViewWidth());
-
-  if (viewWidth.matches) {
-    // If media query matches
-    showAboutText();
-  } else {
-    console.log("media query");
-  }
-}
-
-function checkViewWidth() {
-  if (viewWidth.matches) {
-    // If media query matches
-    showAboutText();
-  } else {
-    console.log("media query");
-  }
+  showAboutText();
 }
 
 //About section text animation
@@ -48,7 +29,6 @@ function showAboutText() {
   for (var i = 0; i < aboutText.length; i++) {
     (function(i) {
       setTimeout(function() {
-        document.querySelector(".about-text").style.opacity = "1";
         document.querySelector(".about-text").innerHTML = aboutText[i];
         if (i == aboutText.length - 1) {
           showRestartButton();
@@ -64,11 +44,11 @@ function showRestartButton() {
 
 //Work image script
 document.querySelector("#intermedia").addEventListener("mouseover", () => {
-  console.log(event);
+  //console.log(event);
   loopThroughImages();
 });
 document.querySelector("#intermedia").addEventListener("mouseleave", () => {
-  console.log(event);
+  //console.log(event);
   hideWorkImage();
 });
 
@@ -82,10 +62,6 @@ function loopThroughImages() {
         ).src = `assets/project-pictures/intermedia/${intermediaArray[i]}`;
       }, 300 * i);
     })(i);
-  }
-
-  if (i == intermediaArray.length - 1) {
-    i = 0;
   }
 }
 

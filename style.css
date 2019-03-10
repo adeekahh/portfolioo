@@ -15,6 +15,7 @@ a.nav-link {
 
 html {
   scroll-behavior: smooth;
+  overscroll-behavior: none;
 }
 
 #about,
@@ -67,7 +68,7 @@ html {
   margin-left: 0.5em;
 }
 
-.learn-more-button-arrow-container:nth-child(2) {
+.about-learn-more-arrow-2 {
   display: none;
 }
 
@@ -178,6 +179,53 @@ ul.contact-list {
   background: black;
 }
 
+/*Works page styles*/
+.single-work-title-container {
+  display: flex;
+  position: fixed;
+  top: 0;
+  left: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  transform: translateX(-50%);
+  width: 200%;
+  margin-bottom: 50em;
+}
+
+html {
+  height: 2000vh;
+}
+
+.single-work-title-container-inner {
+  display: flex;
+  white-space: nowrap;
+  transform: translateX(-100%);
+}
+
+.single-work-title {
+  display: flex;
+  font-size: 96px;
+}
+
+.single-work-title:hover {
+  -webkit-text-fill-color: rgba(0, 0, 0, 0);
+  -webkit-text-stroke: 1px black;
+}
+
+.marquee {
+  /* animation: marquee 12s linear infinite; */
+  padding: 1em 0.2em;
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
 @media screen and (min-width: 60em) {
   #about,
   #background,
@@ -210,8 +258,7 @@ ul.contact-list {
   }
 
   .about-learn-more-button {
-    position: sticky;
-    position: -webkit-sticky;
+    position: absolute;
     bottom: 10%;
     transform: translateY(50%);
     right: 2%;
@@ -221,6 +268,14 @@ ul.contact-list {
   .about-restart-arrow {
     font-size: 32px;
     transition: all 0.4s ease-in-out;
+  }
+
+  .about-learn-more-arrow-2 {
+    display: initial;
+  }
+
+  .about-restart-button:hover .about-restart-arrow {
+    transform: rotate(-360deg);
   }
 
   .learn-more-button-arrow-container {
@@ -233,7 +288,7 @@ ul.contact-list {
     transform: translateX(-52px);
   }
 
-  .learn-more-button-arrow-container:hover .about-learn-more-arrow {
+  .about-learn-more-button:hover .about-learn-more-arrow {
     transform: translateX(-8px);
   }
 
@@ -271,17 +326,19 @@ ul.contact-list {
   }
 
   .work-image-container {
-    position: absolute;
+    position: fixed;
     display: flex;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
     justify-content: center;
+    z-index: 0;
+  }
+
+  ul.websites-list {
+    z-index: 1;
   }
 
   .work-image {
-    width: 90%;
-    height: 90%;
+    width: 25%;
+    height: 25%;
     display: none;
   }
 
