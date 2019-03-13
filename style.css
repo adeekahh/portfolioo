@@ -16,6 +16,7 @@ a.nav-link {
 html {
   scroll-behavior: smooth;
   overscroll-behavior: none;
+  background-color: whitesmoke;
 }
 
 #about,
@@ -210,6 +211,7 @@ html {
 .single-work-title {
   display: flex;
   font-size: 48px;
+  color: wheat;
 }
 
 .single-work-title:hover {
@@ -383,5 +385,83 @@ html {
 
   .single-work-title {
     font-size: 96px;
+  }
+
+  .single-work-content-container {
+    margin-top: 165px;
+  }
+
+  h2.single-work-details-header {
+    font-size: 16px;
+    margin-bottom: 10px;
+    border-bottom: 2px solid orange;
+    line-height: 2.4;
+    /* background-color: ghostwhite; */
+    /* padding-right: 108px; */
+  }
+  .single-work-content-details {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    float: right;
+    padding: 0.5em;
+    position: fixed;
+    left: 54%;
+    grid-gap: 24px;
+  }
+  .single-work-details-text {
+    font-size: 24px;
+  }
+
+  .single-work-content-main-text {
+    width: 45%;
+    margin-left: 65px;
+    padding-top: 25px;
+    line-height: 1.4;
+    display: flex;
+  }
+  i.fas.fa-user {
+    margin-left: 5px;
+  }
+
+  .project-navigation-container {
+    width: 45%;
+    display: flex;
+    position: fixed;
+    right: 0;
+    bottom: 0%;
+    justify-content: space-between;
+    background-color: white;
+  }
+  .project-navigation-arrow-container {
+    padding: 1em;
+    transition: all 0.4s ease-in-out;
+
+    display: flex;
+  }
+
+  h2.single-work-details-header {
+    width: 65%;
+  }
+
+  .project-navigation:hover .project-navigation-arrow-container {
+    transform: translateX(-100px);
+  }
+
+  .project-navigation:hover .project-navigation-arrow-container-right {
+    transform: translateX(100px);
+  }
+
+  .project-next-arrow {
+    margin-left: -85px;
+    margin-right: 150px;
+  }
+
+  span.project-previous-arrow {
+    margin-right: 65px;
+  }
+
+  .project-navigation {
+    overflow: hidden;
+    width: 125px;
   }
 }

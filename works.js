@@ -6,6 +6,9 @@ window.onload = () => {
     marquees.forEach(el => {
       marquee.parentNode.append(marquee.cloneNode(true));
     });
+    document.querySelector(
+      ".single-work-title-container-inner"
+    ).style.transform = `translateX(0)`;
   }
 };
 
